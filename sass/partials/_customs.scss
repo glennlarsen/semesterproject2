@@ -1,0 +1,33 @@
+$colour-secondary: #efefef;
+$colour-primary: #e92569;
+$colour-dark: #0a0a0a;
+$colour-grey: #767676;
+
+$theme-colors: (
+  "primary": $colour-primary,
+  "dark": $colour-dark,
+  "light": $colour-secondary,
+);
+
+$input-bg: white;
+$input-border-color: white;
+
+$font-family-base: "Lato", sans-serif;
+$headings-font-family: "Lato", sans-serif;
+$headings-color: $colour-primary;
+
+$body-bg: #e5e5e5;
+$body-color: $colour-primary;
+
+$pagination-color: $colour-primary;
+$pagination-active-color: white;
+$pagination-active-bg: $colour-primary;
+$pagination-border-color: $colour-primary;
+$pagination-active-border-color: $colour-primary;
+$pagination-hover-color: white;
+$pagination-hover-bg: $colour-primary;
+$pagination-hover-border-color: $colour-primary;
+$pagination-focus-color: $colour-primary;
+$pagination-focus-outline: $colour-primary;
+
+$bs-black-rgb: $colour-primary;
