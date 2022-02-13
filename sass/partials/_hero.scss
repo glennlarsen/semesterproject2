@@ -1,0 +1,23 @@
+.hero-banner {
+    background: url("../../images/hero.jpg") center left, no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    padding: 0 !important;
+    box-shadow: 0px 2px 10px $colour-grey;
+
+    @include media-breakpoint-up(sm) {
+        background-position: center;
+        min-height: 600px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+
+      h1, p {
+          color: white;
+          text-shadow: 1px 1px 2px $colour-grey;
+      }
+
+}

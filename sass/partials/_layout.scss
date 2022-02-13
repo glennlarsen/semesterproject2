@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-family-base;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}

@@ -1,33 +1,45 @@
-$colour-secondary: #efefef;
-$colour-primary: #e92569;
-$colour-dark: #0a0a0a;
-$colour-grey: #767676;
+@font-face {
+  font-family: "futura PT medium";
+  src: url(../../fonts/FuturaPTMedium.otf);
+}
+
+@font-face {
+  font-family: "futura PT bold";
+  src: url(../../fonts/FuturaPTBold.otf);
+}
+
+@font-face {
+  font-family: "futura PT light";
+  src: url(../../fonts/FuturaPTLight.otf);
+}
+
+$colour-secondary: #f6d126;
+$colour-primary: #88b2aa;
+$colour-dark: black;
+$colour-grey: #808077;
+$colour-light: #edf3e9;
 
 $theme-colors: (
   "primary": $colour-primary,
   "dark": $colour-dark,
-  "light": $colour-secondary,
+  "light": $colour-light,
 );
 
 $input-bg: white;
 $input-border-color: white;
 
-$font-family-base: "Lato", sans-serif;
-$headings-font-family: "Lato", sans-serif;
-$headings-color: $colour-primary;
+$font-family-base: "verdana", sans-serif;
+$headings-font-family: "futura PT bold", serif;
+$headings-color: $colour-grey;
 
-$body-bg: #e5e5e5;
-$body-color: $colour-primary;
+$body-bg: white;
+$body-color: $colour-grey;
 
-$pagination-color: $colour-primary;
-$pagination-active-color: white;
-$pagination-active-bg: $colour-primary;
-$pagination-border-color: $colour-primary;
-$pagination-active-border-color: $colour-primary;
-$pagination-hover-color: white;
-$pagination-hover-bg: $colour-primary;
-$pagination-hover-border-color: $colour-primary;
-$pagination-focus-color: $colour-primary;
-$pagination-focus-outline: $colour-primary;
 
-$bs-black-rgb: $colour-primary;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px,
+);

@@ -1,0 +1,30 @@
+.top-navbar {
+    background: $colour-dark;
+    color: white;
+    font-style: italic;
+    font-size: .8rem;
+    text-align: center;
+    padding: .2rem;
+}
+
+.nav-link__mobile {
+    font-size: 1.6rem;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+  padding-left: 0;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-brand {
+  margin: 0;
+}
+
+.nav-link {
+    color: $colour-grey;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
