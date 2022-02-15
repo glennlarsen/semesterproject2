@@ -16,9 +16,24 @@
   padding-left: 0;
 }
 
+.nav-link__cart span {
+    @include media-breakpoint-up(sm) {
+        display: none;
+      } 
+}
+
 .navbar-collapse {
   flex-grow: 0;
 }
+
+.navbar-nav {
+    gap: 1rem;
+
+    @include media-breakpoint-up(sm) {
+        gap: 2rem;
+      } 
+}
+
 .navbar-brand {
   margin: 0;
 }
@@ -27,4 +42,8 @@
     color: $colour-grey;
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: $colour-secondary !important;
 }

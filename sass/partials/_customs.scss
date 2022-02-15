@@ -13,7 +13,7 @@
   src: url(../../fonts/FuturaPTLight.otf);
 }
 
-$colour-secondary: #f6d126;
+$colour-secondary: #DE970B;
 $colour-primary: #88b2aa;
 $colour-dark: black;
 $colour-grey: #808077;
@@ -26,7 +26,7 @@ $theme-colors: (
 );
 
 $input-bg: white;
-$input-border-color: white;
+$input-border-color: $colour-grey;
 
 $font-family-base: "verdana", sans-serif;
 $headings-font-family: "futura PT bold", serif;

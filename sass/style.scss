@@ -15,6 +15,7 @@
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/modal";
 
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/dropdown";
@@ -39,4 +40,6 @@
 @import "./partials/layout";
 @import "./partials/typography";
 @import "./partials/buttons";
+@import "./partials/productgrid";
+@import "./partials/messages";
 
