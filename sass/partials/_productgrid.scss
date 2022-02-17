@@ -3,15 +3,33 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-  gap: 20px;
+  gap: 25px;
   row-gap: 30px;
   padding: 40px 0;
 }
 
 .product {
+  max-width: 517px;
+
+  a {
+    text-decoration: none;
+  &:first-of-type {
+      flex-grow: 1;
+    }
+  }
+
   img {
     height: 400px;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
 
     &:hover {
       clip-path: none;
@@ -23,7 +41,8 @@
     font-weight: bold;
   }
 
-  img, span {
-    margin-bottom: .8rem;
+  img,
+  span {
+    margin-bottom: 0.8rem;
   }
 }

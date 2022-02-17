@@ -8,10 +8,16 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    line-height: 1.7;
 }
 
 main {
     padding: 2rem 0;
+}
+
+.container p {
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .wrapper {

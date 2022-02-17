@@ -3,23 +3,29 @@
     color: white;
     font-style: italic;
     font-size: .8rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: .2rem;
 }
 
 .nav-link__mobile {
-    font-size: 1.6rem;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
   padding-left: 0;
 }
 
 .nav-link__cart span {
-    @include media-breakpoint-up(sm) {
-        display: none;
-      } 
+    @include media-breakpoint-up(lg) {
+      display: none;
+  }
+}
+
+.fa-bag-shopping {
+  font-size: 1.6rem;
 }
 
 .navbar-collapse {
@@ -29,7 +35,7 @@
 .navbar-nav {
     gap: 1rem;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         gap: 2rem;
       } 
 }

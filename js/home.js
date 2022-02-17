@@ -22,7 +22,7 @@ async function getHero() {
 
     }
     catch (error) {
-        displayMessage("warning", error, ".hero-banner");
+        displayMessage("warning", "An error occurred", ".hero-banner");
     }
 }
 
@@ -41,7 +41,7 @@ async function getFeatured() {
 
     }
     catch (error) {
-        displayMessage("warning", error, ".featured-container");
+        displayMessage("warning", "An error occurred", ".featured-container");
     }
     finally {
         loading.style.display = "none";

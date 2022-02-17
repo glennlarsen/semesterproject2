@@ -10,14 +10,13 @@ export default function createMenu() {
     let authLink = `<a href="#loginModal" role="button" data-bs-toggle="modal" class="nav-link">Login</a>`;
 
     if (username) {
-        authLink = `<a href="add.html" class="nav-link ${pathname === "/add.html" ? "active" : ""}">Add Product</a>
-                    <li><button id="logout">Logout ${username}</button></li>`;
+        authLink = `<a href="dashboard.html" class="nav-link ${pathname === "/dashboard.html" || pathname === "/add.html" || pathname === "/edit.html" ? "active" : ""}"><i class="fa-solid fa-user"></i> ${username}</a>`;
     }
 
     const container = document.querySelector(".menu-container");
 
     container.innerHTML = `
-                           <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                           <nav class="navbar navbar-expand-lg navbar-light bg-light">
                            <div class="container">
                              <button
                                class="navbar-toggler"
@@ -37,7 +36,7 @@ export default function createMenu() {
                                ><i class="fa-solid fa-bag-shopping"></i
                              ></a>
                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                               <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                                  <li class="nav-item">
                                    <a href="/" class="nav-link ${pathname === "/" || pathname === "/index.html" ? "active" : ""}" aria-current="page">Home</a>
                                  </li>

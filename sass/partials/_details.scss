@@ -1,0 +1,51 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  span {
+    color: $colour-dark;
+    font-weight: bold;
+  }
+
+  a {
+    margin: 1rem 0;
+  }
+
+  img {
+    max-height: 500px;
+  }
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .reverse-button {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  a {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 300px;
+    }
+  }
+}

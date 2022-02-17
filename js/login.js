@@ -49,7 +49,7 @@ async function doLogin(username, password) {
             saveToken(json.jwt);
             saveUser(json.user);
 
-            location.href = "/";
+            location.href = "dashboard.html";
         }
 
         if (json.error) {
