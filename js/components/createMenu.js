@@ -48,7 +48,7 @@ export default function createMenu() {
                                  </li>
                                  <li class="nav-item">
                                    <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}"
-                                     ><span>Cart</span> <i class="fa-solid fa-bag-shopping"></i
+                                     ><span>Basket</span> <i class="fa-solid fa-bag-shopping"></i
                                    ></a>
                                  </li>
                                </ul>
