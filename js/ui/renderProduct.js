@@ -1,3 +1,4 @@
+import { handleClick } from "../components/handleClick.js";
 
 
 
@@ -17,10 +18,15 @@ export function renderProduct(product) {
     <h1>${product.title}</h1>
     <span>$${product.price}</span>
     <div class="reverse-button">
-    <a class="btn-green">Add to cart</a>
+    <a class="btn-green" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.formats.thumbnail.url}">Add to cart</a>
     <p>${product.description}</p>
     </div>
     </div>
     </div>
     `;
+
+    const cartButton = document.querySelector(".details a");
+
+    cartButton.addEventListener("click", handleClick);
+
 }

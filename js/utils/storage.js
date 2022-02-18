@@ -1,4 +1,4 @@
-import { tokenKey, userKey } from "../constants/keys.js";
+import { tokenKey, userKey, basketKey } from "../constants/keys.js";
 
 export function saveToken(token) {
     saveToStorage(tokenKey, token);
@@ -20,6 +20,21 @@ export function getUsername() {
     }
 
     return null;
+}
+
+export function getExistingBasket() {
+    const value = localStorage.getItem(basketKey);
+
+    if(!value) {
+        return [];
+    }
+
+    return JSON.parse(value);
+
+}
+
+export function saveBasket(basket) {
+    saveToStorage(basketKey, basket);
 }
 
 export function clearItem(key) {
