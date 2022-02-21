@@ -1,5 +1,7 @@
 import { getUsername } from "../utils/storage.js";
 import logoutButton from "./logoutButton.js";
+import { getExistingBasket } from "../utils/storage.js";
+
 
 export default function createMenu() {
 
@@ -7,18 +9,27 @@ export default function createMenu() {
 
     const username = getUsername();
 
+    const basket = getExistingBasket();
+
+    let totalItems = 0;
+
+    basket.forEach(product => {
+
+        totalItems += parseInt(product.numberOfUnits);
+    });
+
     let authLink = `        <a href="#loginModal" role="button" data-bs-toggle="modal" class="nav-link">Login</a>
                             <li class="nav-item">
                             <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}"
                             ><i class="fa-solid fa-bag-shopping"></i
-                            > <span>Basket</span></a>
+                            > <span>Basket</span><div class="basket-count">${totalItems}</div></a>
                             </li>`;
 
     if (username) {
         authLink = `
         <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}"
         ><i class="fa-solid fa-bag-shopping"></i
-        > <span>Basket</span></a>
+        > <span>Basket</span><div class="basket-count">${totalItems}</div></a>
         <li class="nav-item">
         <a href="dashboard.html" class="nav-link ${pathname === "/dashboard.html" || pathname === "/add.html" || pathname === "/edit.html" ? "active" : ""}"><i class="fa-solid fa-user"></i> ${username}</a></li>`;
     }
@@ -44,7 +55,7 @@ export default function createMenu() {
                             /></a>
                             <a href="basket.html" class="nav-link nav-link__mobile ${pathname === "/basket.html" ? "active" : ""}"
                             ><i class="fa-solid fa-bag-shopping"></i
-                            ></a>
+                            ><div class="basket-count">${totalItems}</div></a>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                             <li class="nav-item">

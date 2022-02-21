@@ -16,6 +16,7 @@
     display: none;
   }
   padding-left: 0;
+  position: relative;
 }
 
 .nav-link__cart span {
@@ -26,6 +27,20 @@
 
 .fa-bag-shopping, .fa-user {
   font-size: 1.6rem;
+}
+
+.basket-count {
+  position: absolute;
+  font-size: .7rem;
+  color: white;
+  top: 16px;
+  left: 4px;
+  text-align: center;
+  width: 15px;
+
+  @include media-breakpoint-up(lg) {
+    left: 11px;
+  }
 }
 
 .navbar-collapse {
@@ -48,6 +63,7 @@
     color: $colour-grey;
     font-size: 1.1rem;
     font-weight: bold;
+    position: relative;
 }
 
 .nav-link.active, .nav-link:hover {

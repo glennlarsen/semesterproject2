@@ -7,17 +7,18 @@ export function renderTotal() {
 
     const basket = getExistingBasket();
     const totalContainer = document.querySelector(".total-container");
-    
+
 
 basket.forEach(product => {
 
- totalPrice += parseFloat(product.price);
+ totalPrice += parseFloat(product.price)*product.numberOfUnits;
 
 if (totalPrice > 100) {
     shipping = freeShipping;
 }
 
-totalContainer.innerHTML = `Total: <span>$${totalPrice}</span>
+totalContainer.innerHTML = `Total: <span>$${totalPrice.toFixed(2)}</span>
                             <div>Shipping:${shipping}</div>`;
+
 });
 }
