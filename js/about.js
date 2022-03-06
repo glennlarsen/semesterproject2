@@ -5,8 +5,9 @@ aboutContainer.innerHTML = `
 <h1>About Us</h1>
 <div>
   <p>
-    Quisque nec neque nibh. Curabitur finibus at ipsum et condimentum.
-    Nunc maximus purus augue, et feugiat turpis mollis ac. Vivamus
+    Secrets of Thailand was founded in 2019 by three young entrepeneurs. 
+    Curabitur finibus at ipsum et condimentum. Nunc maximus purus augue, 
+    et feugiat turpis mollis ac. Vivamus
     mollis odio et risus volutpat scelerisque. Etiam eu metus eu ante
     ullamcorper rutrum vel nec nunc. Nulla nec nisi eu odio tristique
     tempor id eget arcu. Pellentesque eget egestas ante. Proin
