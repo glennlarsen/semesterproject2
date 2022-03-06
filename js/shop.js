@@ -9,13 +9,11 @@ const loading = document.querySelector(".loader");
 
 createMenu();
 
-async function getProducts() {
+(async function getProducts() {
 
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
-
-        console.log(json);
 
         renderProducts(json);
         searchProducts(json);
@@ -27,6 +25,6 @@ async function getProducts() {
     finally {
         loading.style.display = "none";
     }
-}
+}());
 
-getProducts();
+

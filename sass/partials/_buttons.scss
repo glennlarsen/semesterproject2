@@ -35,6 +35,26 @@
   }
 }
 
+.btn-grey {
+  @extend .btn;
+  background: $colour-grey;
+
+  &:hover {
+    background: $colour-secondary;
+    color: white;
+  }
+}
+
+.btn-red {
+  @extend .btn;
+  background: #d4686b;
+
+  &:hover {
+    background: $colour-secondary;
+    color: white;
+  }
+}
+
 #logout {
   background: black;
   padding: 0.5rem;
@@ -55,5 +75,56 @@
     background: white;
     color: $colour-secondary;
     border: 1px solid $colour-secondary;
+  }
+}
+
+.btn-edit,
+.btn-delete,
+.btn-confirm {
+  width: auto;
+  margin: 0 1rem;
+  padding: 0.8rem 2rem;
+}
+
+.btn-delete {
+  background-color: $colour-grey;
+  color: white;
+}
+
+.btn-confirm {
+  margin: 1rem;
+}
+
+.btn-add-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+
+  span {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 250px;
+
+    span {
+      display: block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.btn-back {
+  color: $colour-grey;
+  display: none;
+  padding: 5px 0;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+
+  &:hover {
+    color: $colour-secondary;
   }
 }

@@ -1,27 +1,17 @@
 @font-face {
-    font-family: "futura PT medium";
-    src: url(../../fonts/FuturaPTMedium.otf);
+  font-family: "futura PT medium";
+  src: url(../../fonts/FuturaPTMedium.otf);
 }
 
 @font-face {
-    font-family: "futura PT bold";
-    src: url(../../fonts/FuturaPTBold.otf);
+  font-family: "futura PT bold";
+  src: url(../../fonts/FuturaPTBold.otf);
 }
 
-@font-face {
-    font-family: "futura PT light";
-    src: url(../../fonts/FuturaPTLight.otf);
-}
-
-
-h1 {
-   color: $colour-grey; 
-}
-
-h2 {
-    color: $colour-grey;
+h1, h2 {
+  color: $colour-grey;
 }
 
 h3 {
-    color: $colour-primary;
+  color: $colour-primary;
 }

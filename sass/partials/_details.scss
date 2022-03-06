@@ -10,7 +10,7 @@
   }
 
   @include media-breakpoint-up(sm) {
-      display: flex;
+    display: flex;
   }
 
   span {
@@ -32,6 +32,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 0.5rem;
 
   @include media-breakpoint-up(lg) {
     align-items: flex-start;
@@ -40,7 +41,8 @@
 
   @include media-breakpoint-up(sm) {
     display: flex;
-}
+    margin-top: 0;
+  }
 
   .reverse-button {
     @include media-breakpoint-up(lg) {
@@ -49,9 +51,9 @@
     }
 
     span {
-        padding-top: 10px;
-        color: $colour-primary;
-        opacity: 0;
+      padding-top: 10px;
+      color: $colour-primary;
+      opacity: 0;
     }
   }
 
@@ -63,4 +65,3 @@
     }
   }
 }
-

@@ -2,8 +2,11 @@ import createMenu from "./components/createMenu.js";
 import displayMessage from "./components/displayMessage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
+import createFooter from "./components/createFooter.js";
+import { invalidLogin, invalidValues } from "./constants/messages.js";
 
 createMenu();
+createFooter();
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -21,7 +24,7 @@ function submitForm(event) {
     const passwordValue = password.value.trim();
 
     if (usernameValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("warning", "Invalid values", ".message-container");
+        return displayMessage("warning", invalidValues, ".message-container");
     }
 
     doLogin(usernameValue, passwordValue);
@@ -53,7 +56,7 @@ async function doLogin(username, password) {
         }
 
         if (json.error) {
-            displayMessage("warning", "Invalid login details", ".message-container");
+            displayMessage("warning", invalidLogin, ".message-container");
         }
 
     } catch (error) {

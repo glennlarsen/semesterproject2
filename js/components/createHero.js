@@ -1,5 +1,4 @@
 
-
 export function createHero(hero) {
 
     const heroContainer = document.querySelector(".hero-banner");

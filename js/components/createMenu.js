@@ -18,25 +18,26 @@ export default function createMenu() {
         totalItems += parseInt(product.numberOfUnits);
     });
 
-    let authLink = `        <a href="#loginModal" role="button" data-bs-toggle="modal" class="nav-link">Login</a>
-                            <li class="nav-item">
-                            <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}"
-                            ><i class="fa-solid fa-bag-shopping"></i
-                            > <span>Basket</span><div class="basket-count">${totalItems}</div></a>
+    let authLink = `        <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}">
+                            <i class="fa-solid fa-bag-shopping"></i> <span>Basket</span><div class="basket-count">${totalItems}</div></a>
+                            <li class="nav-item nav-item__login">
+                            <a href="#loginModal" role="button" data-bs-toggle="modal" class="nav-link">Log in</a>
                             </li>`;
 
     if (username) {
         authLink = `
-        <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}"
-        ><i class="fa-solid fa-bag-shopping"></i
-        > <span>Basket</span><div class="basket-count">${totalItems}</div></a>
-        <li class="nav-item">
+        <a href="basket.html" class="nav-link nav-link__cart ${pathname === "/basket.html" ? "active" : ""}">
+        <i class="fa-solid fa-bag-shopping"></i> 
+        <span>Basket</span><div class="basket-count">${totalItems}</div></a>
+        <li class="nav-item nav-item__login">
         <a href="dashboard.html" class="nav-link ${pathname === "/dashboard.html" || pathname === "/add.html" || pathname === "/edit.html" ? "active" : ""}"><i class="fa-solid fa-user"></i> ${username}</a></li>`;
     }
 
     const container = document.querySelector(".menu-container");
 
-    container.innerHTML = `
+    container.innerHTML = `<div class="top-navbar">
+                           <i class="fa-solid fa-check"></i> Free shipping on orders over $100
+                           </div>
                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                            <div class="container">
                            <button
@@ -64,6 +65,9 @@ export default function createMenu() {
                             <li class="nav-item">
                             <a href="shop.html" class="nav-link ${pathname === "/shop.html" ? "active" : ""}">Shop</a>
                             </li>
+                            <li class="nav-item nav-item__margin">
+                            <a href="about.html" class="nav-link ${pathname === "/about.html" ? "active" : ""}">About</a>
+                            </li>
                             <li class="nav-item">
                             ${authLink}
                             </li>
@@ -76,7 +80,7 @@ export default function createMenu() {
                          <div class="modal-dialog">
                          <div class="modal-content">
                          <div class="modal-header">
-                         <h4 class="modal-title">Login</h4>
+                         <h4 class="modal-title">Log in</h4>
                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                          </div>
                          <div class="modal-body">
@@ -98,5 +102,4 @@ export default function createMenu() {
                          </div>`;
 
     logoutButton();
-
 }

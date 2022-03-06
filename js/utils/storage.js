@@ -25,7 +25,7 @@ export function getUsername() {
 export function getExistingBasket() {
     const value = localStorage.getItem(basketKey);
 
-    if(!value) {
+    if (!value) {
         return [];
     }
 

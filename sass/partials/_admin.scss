@@ -1,11 +1,30 @@
 .admin-menu-container {
   flex-direction: column;
+  position: relative;
 
   a {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
+  }
+
+  .line {
+    width: 500px;
+    border-bottom: 1px solid grey;
+    position: absolute;
+    bottom: -10px;
+    opacity: 0.3;
+    margin: 0 auto;
+    transform: translate(0%, 50%);
+  }
+
+  #logout {
+    margin-top: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
   }
 }

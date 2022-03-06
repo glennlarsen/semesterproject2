@@ -2,7 +2,6 @@ import { getExistingBasket } from "../utils/storage.js";
 import { saveBasket } from "../utils/storage.js";
 import createMenu from "./createMenu.js";
 
-
 export function handleClick() {
 
     const id = this.dataset.id;
@@ -16,7 +15,7 @@ export function handleClick() {
 
     const productExists = currentBasket.find(function (bask) {
         return bask.id === id;
-        
+
     });
 
     if (!productExists) {
@@ -33,8 +32,8 @@ export function handleClick() {
         setTimeout(function () {
             addedToBasket.innerHTML = "Add to Basket";
             addedToBasket.style.pointerEvents = "auto";
-          }, 2000)
-        
+        }, 2000)
+
     }
     else {
         currentBasket.findIndex(function (product) {
@@ -49,7 +48,7 @@ export function handleClick() {
         setTimeout(function () {
             addedToBasket.innerHTML = "Add to Basket";
             addedToBasket.style.pointerEvents = "auto";
-          }, 2000)
+        }, 2000)
 
     }
     createMenu();

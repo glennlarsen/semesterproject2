@@ -1,17 +1,16 @@
 .top-navbar {
-    background: $colour-dark;
-    color: white;
-    font-style: italic;
-    font-size: .8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: .2rem;
+  background: $colour-dark;
+  color: white;
+  font-style: italic;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.2rem;
 }
 
 .nav-link__mobile {
-
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -20,23 +19,27 @@
 }
 
 .nav-link__cart span {
-    @include media-breakpoint-up(lg) {
-      display: none;
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 }
 
-.fa-bag-shopping, .fa-user {
-  font-size: 1.6rem;
+.fa-bag-shopping {
+  font-size: 1.7rem;
+}
+
+.fa-user {
+  font-size: 1.4rem;
 }
 
 .basket-count {
   position: absolute;
-  font-size: .7rem;
+  font-size: 0.8rem;
   color: white;
-  top: 16px;
-  left: 4px;
+  top: 24px;
+  left: 2.5px;
   text-align: center;
-  width: 15px;
+  width: 17px;
 
   @include media-breakpoint-up(lg) {
     left: 11px;
@@ -48,11 +51,17 @@
 }
 
 .navbar-nav {
-    gap: 1rem;
+  gap: 1rem;
 
-    @include media-breakpoint-up(lg) {
-        gap: 2rem;
-      } 
+  @include media-breakpoint-up(lg) {
+    gap: 2rem;
+  }
+}
+
+.navbar {
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 0;
+  }
 }
 
 .navbar-brand {
@@ -60,12 +69,33 @@
 }
 
 .nav-link {
-    color: $colour-grey;
-    font-size: 1.1rem;
-    font-weight: bold;
-    position: relative;
+  color: $colour-grey;
+  font-size: 1.6rem;
+  position: relative;
+  font-family: "futura PT medium";
 }
 
-.nav-link.active, .nav-link:hover {
-    color: $colour-secondary !important;
+.nav-link.active,
+.nav-link:hover {
+  color: $colour-secondary !important;
+}
+
+.nav-item__margin {
+  @include media-breakpoint-up(lg) {
+    margin-right: 4rem;
+  }
+}
+
+.nav-item__login {
+  border: 2px solid $colour-primary;
+  width: 100%;
+  text-align: center;
+
+  a {
+    padding: 0 1.5rem !important;
+  }
+
+  &:hover {
+    border-color: $colour-secondary;
+  }
 }

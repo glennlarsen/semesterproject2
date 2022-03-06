@@ -1,7 +1,7 @@
 import { getExistingBasket } from "../utils/storage.js";
 import { saveBasket } from "../utils/storage.js";
 import { updateBasket } from "./updateBasket.js";
-import createMenu from "./createMenu.js";  
+import createMenu from "./createMenu.js";
 
 //Change number of units for an item
 export function incrementNumberOfUnits() {
@@ -15,8 +15,6 @@ export function incrementNumberOfUnits() {
         }
     });
     saveBasket(currentBasket);
-
     updateBasket();
     createMenu();
-
-  }
+}

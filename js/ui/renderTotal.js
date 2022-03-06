@@ -1,4 +1,4 @@
-import { defaultShipping, freeShipping } from "../constants/keys.js";
+import { defaultShipping, freeShipping } from "../constants/messages.js";
 import { getExistingBasket } from "../utils/storage.js"
 
 export function renderTotal() {
@@ -8,17 +8,17 @@ export function renderTotal() {
     const basket = getExistingBasket();
     const totalContainer = document.querySelector(".total-container");
 
+    basket.forEach(product => {
 
-basket.forEach(product => {
+        totalPrice += parseFloat(product.price) * product.numberOfUnits;
 
- totalPrice += parseFloat(product.price)*product.numberOfUnits;
+        if (totalPrice > 100) {
+            shipping = freeShipping;
+        }
 
-if (totalPrice > 100) {
-    shipping = freeShipping;
-}
+        totalContainer.innerHTML = `Total: <span>$${totalPrice.toFixed(2)}</span>
+                            <div>Shipping:${shipping}</div>
+                            <button class="btn-green">Checkout</button>`;
 
-totalContainer.innerHTML = `Total: <span>$${totalPrice.toFixed(2)}</span>
-                            <div>Shipping:${shipping}</div>`;
-
-});
+    });
 }

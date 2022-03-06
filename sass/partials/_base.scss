@@ -31,22 +31,24 @@ img {
 
 .bottom-footer {
   background-color: $colour-grey;
-  padding: .5rem;
+  padding: 0.5rem;
   color: white;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
-.top-footer-content, .bottom-footer, .footer-links {
+.top-footer-content,
+.bottom-footer,
+.footer-links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .top-footer-content {
-    @include media-breakpoint-up(sm) {
-        flex-direction: row;
-        justify-content: space-between;
-      } 
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .link-group {
@@ -72,6 +74,12 @@ img {
 }
 
 .footer-logo {
-    max-width: 200px;
-    padding-bottom: 1rem;
+  max-width: 200px;
+  padding-bottom: 1rem;
+}
+
+/*About Page*/
+.about-img {
+  max-width: 700px;
+  margin-top: 1rem;
 }

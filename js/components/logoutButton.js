@@ -6,13 +6,9 @@ export default function logoutButton() {
 
     if (button) {
         button.onclick = function () {
-            const doLogout = confirm("Are you sure?");
-
-            if (doLogout) {
-                clearItem(userKey);
-                clearItem(tokenKey);
-                location.href = "/";
-            }
+            clearItem(userKey);
+            clearItem(tokenKey);
+            location.href = "/";
         };
     }
 }

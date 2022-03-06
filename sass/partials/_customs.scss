@@ -1,19 +1,5 @@
-@font-face {
-  font-family: "futura PT medium";
-  src: url(../../fonts/FuturaPTMedium.otf);
-}
 
-@font-face {
-  font-family: "futura PT bold";
-  src: url(../../fonts/FuturaPTBold.otf);
-}
-
-@font-face {
-  font-family: "futura PT light";
-  src: url(../../fonts/FuturaPTLight.otf);
-}
-
-$colour-secondary: #DE970B;
+$colour-secondary: #de970b;
 $colour-primary: #88b2aa;
 $colour-dark: black;
 $colour-grey: #808077;
@@ -29,14 +15,12 @@ $input-bg: white;
 $input-border-color: $colour-grey;
 $input-focus-border-color: $colour-secondary;
 
-
 $font-family-base: "verdana", sans-serif;
 $headings-font-family: "futura PT bold", serif;
 $headings-color: $colour-grey;
 
 $body-bg: white;
 $body-color: $colour-grey;
-
 
 $container-max-widths: (
   sm: 540px,

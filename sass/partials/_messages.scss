@@ -1,13 +1,22 @@
-.warning {
+@mixin alert-message($color) {
   color: white;
-  background: darkred;
+  background: $color;
   padding: 1rem;
-  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.warning {
+  @include alert-message(darkred);
 }
 
 .success {
-  color: white;
-  background: green;
-  padding: 1rem;
-  border-radius: 8px;
+  @include alert-message($colour-primary);
 }

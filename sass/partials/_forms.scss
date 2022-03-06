@@ -1,8 +1,26 @@
-input:focus, textarea:focus {
-    box-shadow: 0 0 5px rgba(222, 151, 11, 1) !important;
-  }
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(222, 151, 11, 1) !important;
+}
 
-  .search {
-      max-width: 650px;
-      margin: 0 auto;
-  }
+.search {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+#editDisplay_image,
+#addDisplay_image {
+  width: 100%;
+  height: 225px;
+  border: 1px dashed black;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#deleteProductForm .modal-footer {
+  justify-content: center;
+}

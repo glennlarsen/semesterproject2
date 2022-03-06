@@ -10,13 +10,11 @@ const loading = document.querySelector(".loader");
 
 createMenu();
 
-async function getHero() {
+(async function getHero() {
 
     try {
         const response = await fetch(heroUrl);
         const json = await response.json();
-
-        console.log(json);
 
         createHero(json);
 
@@ -24,28 +22,22 @@ async function getHero() {
     catch (error) {
         displayMessage("warning", "An error occurred", ".hero-banner");
     }
-}
+}());
 
-getHero();
-
-
-async function getFeatured() {
+(async function getFeatured() {
 
     try {
         const response = await fetch(featuredUrl);
         const json = await response.json();
 
-        console.log(json);
-
         renderFeatured(json);
 
     }
     catch (error) {
-        displayMessage("warning", "An error occurred", ".featured-container");
+        displayMessage("warning", "An error occurred", ".products-container");
     }
     finally {
         loading.style.display = "none";
     }
-}
+}());
 
-getFeatured();
