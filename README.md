@@ -32,6 +32,15 @@ The project is setup with a rest API on Strapi where the products and hero image
 
 Install the visual studio code plugin `Live server` and run the project by right clicking the index file and choose `Open with live server`
 
+### Strapi server
+
+The strapi server is hosted locally. To run the strapi server clone this repo with this command
+` git clone https://github.com/glennlarsen/strapi-semester-project2.git`
+
+`npm install` to install all dependencies.
+
+`npm run develop` to start the strapi server on localhost.
+
 ### Live Site
 
 The website is deployed on netlify.
