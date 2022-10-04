@@ -34,7 +34,7 @@ Install the visual studio code plugin `Live server` and run the project by right
 
 ### Strapi server
 
-The strapi server is hosted locally. To run the strapi server clone this repo with this command
+The strapi server is hosted locally. To run the strapi server clone this repo with this command\
 ` git clone https://github.com/glennlarsen/strapi-semester-project2.git`
 
 `npm install` to install all dependencies.
